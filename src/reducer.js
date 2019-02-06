@@ -33,7 +33,7 @@ const reducer = (state = initialState, action) => {
     } else if (type === "SET_COUNTER") {
         return {
             ...state,
-            value: action.input
+            value: parseInt(action.input)
         }
     }
     return state
