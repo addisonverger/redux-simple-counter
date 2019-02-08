@@ -9,16 +9,16 @@ subscribe(() => render(getState()))
 
 // Dispatch the "INCREMENT" action every time the +1 button is pressed
 const incrementButton = document.getElementById('increment');
-incrementButton.addEventListener('click', e => dispatch({ type: "INCREMENT" }));
+incrementButton.addEventListener('click', e => dispatch({ type: "CHANGE_COUNTER", value: 1 }));
 
 const decrementButton = document.getElementById('decrement')
-decrementButton.addEventListener('click', e => dispatch({ type: "DECREMENT" }))
+decrementButton.addEventListener('click', e => dispatch({ type: "CHANGE_COUNTER", value: -1 }))
 
 const incrementFiveButton = document.getElementById('incrementFive')
-incrementFiveButton.addEventListener('click', e => dispatch({ type: "INCREMENT_FIVE" }))
+incrementFiveButton.addEventListener('click', e => dispatch({ type: "CHANGE_COUNTER", value: 5 }))
 
 const decrementFiveButton = document.getElementById('decrementFive')
-decrementFiveButton.addEventListener('click', e => dispatch({ type: "DECREMENT_FIVE" }))
+decrementFiveButton.addEventListener('click', e => dispatch({ type: "CHANGE_COUNTER", value: -5 }))
 
 const changeColor = document.getElementById('color')
 changeColor.addEventListener('change', e => dispatch({ type: "CHANGE_COLOR", color: changeColor.value }))

@@ -5,25 +5,10 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     let { type } = action;
-    if (type === "INCREMENT") {
+    if (type === "CHANGE_COUNTER") {
         return {
             ...state,
-            value: state.value + 1
-        }
-    } else if (type === "DECREMENT") {
-        return {
-            ...state,
-            value: state.value - 1
-        }
-    } else if (type === "INCREMENT_FIVE") {
-        return {
-            ...state,
-            value: state.value + 5
-        }
-    } else if (type === "DECREMENT_FIVE") {
-        return {
-            ...state,
-            value: state.value - 5
+            value: state.value + action.value
         }
     } else if (type === "CHANGE_COLOR") {
         return {
